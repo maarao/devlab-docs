@@ -75,6 +75,12 @@ sudo tailscale up
 sudo systemctl enable tailscaled
 ```
 
+5. Disable key expiry:
+   - Go to the Tailscale admin dashboard
+   - Locate the newly added machine
+   - Click the three dots (⋮) menu next to the server
+   - Disable "Key expiry"
+
 #### Install Docker
 Follow these steps if the [standard installation](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository) fails:
 
