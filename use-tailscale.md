@@ -1,17 +1,24 @@
-How to use tailscale.
+# Using Tailscale
 
-All devlab servers exist on a tailscale network that allows them to communicate with each other.
+## Overview
+All devlab servers exist on a Tailscale network that allows them to communicate with each other.
 
-To connect to the tailnet, you need to install the tailscale client on your machine.
+## Installation
+1. Install the Tailscale client on your machine
+   - Download from the [Tailscale website](https://tailscale.com/download)
 
-You can download the client from the [tailscale website](https://tailscale.com/download).
+## Setup
+1. Launch the Tailscale client
+2. Click "Log in with Google" to authenticate with your account
+3. Wait for connection to the tailnet to be established
 
-Once you have installed the client, you can launch it and login with your tailscale account. For us, that means clicking the "Log in with Google" button.
-
-Once you are logged in, you should be able to connect to the tailnet. You can then ssh into any of the devlab servers using the following command:
-
-```
+## Connecting to Servers
+You can SSH into any devlab server using:
+```bash
 ssh maintenance@<server-name>
 ```
 
-Replace `<server-name>` with the name of the server you want to connect to. If you want to figure out the name of the server you want to connect to, you can go to the [tailscale dashboard](https://login.tailscale.com/admin/machines) and find the name of the machine you want to connect to.
+To find the correct server name:
+1. Visit the [Tailscale dashboard](https://login.tailscale.com/admin/machines)
+2. Locate your target machine in the list
+3. Use the displayed machine name in place of `<server-name>`
